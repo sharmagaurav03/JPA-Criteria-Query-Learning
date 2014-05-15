@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
-	<jdbc:embedded-database id="dataSource" type="HSQL" />
-
+	<jdbc:embedded-database id="dataSource" type="HSQL">
+	</jdbc:embedded-database>
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -16,13 +16,9 @@
 				<property name="database" value="HSQL" />
 			</bean>
 		</property>
-		<!-- property name="persistenceUnitName" value="jpa.sample"/> -->
 	</bean>
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
-
-	
-
 </beans>
