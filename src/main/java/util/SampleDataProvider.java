@@ -24,6 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -39,7 +40,7 @@ import org.springframework.util.Assert;
  * 
  */
 @Component
-// @Profile("with-data")
+@Profile("with-data")
 class SampleDataProvider implements ApplicationListener<ContextRefreshedEvent>,
 		ApplicationContextAware {
 	private static boolean called = false;

@@ -22,15 +22,11 @@ import javax.persistence.Embeddable;
 
 import org.springframework.util.Assert;
 
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
-
 /**
  * A value object abstraction of an email address.
  * 
  */
 @Embeddable
-@JsonSerialize(using = ToStringSerializer.class)
 public class EmailAddress {
 
 	private static final String EMAIL_REGEX = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
@@ -74,4 +70,13 @@ public class EmailAddress {
 	public String toString() {
 		return value;
 	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+	
 }

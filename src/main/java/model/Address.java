@@ -20,9 +20,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.springframework.util.Assert;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * An address.

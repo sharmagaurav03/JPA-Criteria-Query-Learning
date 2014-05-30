@@ -1,16 +1,33 @@
 package repository;
 
-import java.util.Map;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 public interface QueryExecutorRepository {
+	
+	public void executeQuery1();
+	
+	public void executeQuery2();
 
-	Page<Object> executeNativeQuery(String queryStr,
-			Map<String, String> params, Pageable pageable);
+	void executeQuery3();
 
-	Page<Object> executeJPQLQuery(String queryStr, Map<String, String> params,
-			Pageable pageable);
+	void executeQuery4();
 
+	void executeQuery5();
+
+	void executeQuery6();
+
+	void executeQuery7();
+
+	void executeQuery8();
+
+	void executeQuery9();
+
+	void executeQuery10();
+
+	void executeQuery11();
+
+	void executeQuery12();
+
+	void executeQuery13();
+	
+	
 }

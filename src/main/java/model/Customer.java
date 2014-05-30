@@ -57,6 +57,7 @@ public class Customer {
 		return id;
 	}
 
+	
 	@Column(unique = true)
 	private EmailAddress emailAddress;
 
